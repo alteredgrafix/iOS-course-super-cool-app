@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var blueDot: UIImageView!
+    @IBOutlet weak var redDot: UIImageView!
+    @IBOutlet weak var hideBlueBtn: UIButton!
+    @IBOutlet weak var hideRedBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +24,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func makeBlueDotDisappear (sender:AnyObject){
+        blueDot.hidden = true
+        hideBlueBtn.hidden = true
+        redDot.hidden = false
+        hideRedBtn.hidden = false
+    }
+    @IBAction func makeRedDotDisappear (sender:AnyObject){
+        blueDot.hidden = false
+        hideBlueBtn.hidden = false
+        redDot.hidden = true
+        hideRedBtn.hidden = true
+    }
 
 }
 
